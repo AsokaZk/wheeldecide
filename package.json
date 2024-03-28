@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-search-autocomplete": "^8.5.2",
     "react-wheel-of-prizes": "^1.0.9"
   },
   "devDependencies": {

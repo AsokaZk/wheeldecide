@@ -8,7 +8,9 @@ function Congrats(props) {
         <div className="congrats" onClick={() => props.setName("")}>
           <>
             <img src={logo} alt="loading..." className="confeti" />
-            <h1 className="winner">{props.name}</h1>
+            <h1 className="winner" style={{ color: props.color }}>
+              {props.name}
+            </h1>
           </>
         </div>
       )}

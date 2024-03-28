@@ -4,15 +4,17 @@ import WheelDecide from "./WheelDecide";
 
 export default function Wheel(props) {
   const [name, setName] = useState("");
+  const [color, setColor] = useState("#FFFFFF");
 
-  const onFinished = (winner, camp) => {
+  const onFinished = (winner, camp, colorName, color) => {
     if (camp != []) {
-      setName(`${camp[0]}: Equipo ${winner}`);
+      setName(`${camp.name}: Casa de ${winner} (${colorName})`);
+      setColor(color);
     }
   };
   return (
     <div className="whee">
-      <Congrats name={name} setName={setName} />
+      <Congrats name={name} setName={setName} color={color} />
       <WheelDecide camper={props.camper} onFinished={onFinished} />
     </div>
   );
